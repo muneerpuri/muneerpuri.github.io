@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #060c21;
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #060c21;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.brand-image img {
+  width: 100px;
+  height: 70px;
+}
+.navbar-links li {
+  padding: 30px;
+}
+.navbar-links li:hover {
+  background-color: grey;
+}
+.navbar-links li a {
+  text-decoration: none;
+  margin: 9px;
+  color: white;
+}
+#imenu {
+  font-size: 35px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  color: white;
+  display: none;
+}
+
+.headabout{
+  flex-direction: column;
+  content: '';
+  position: relative;
+  z-index: -10;
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  background: url(./images/headabout.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  background: url(./images/headimage.jpg) no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  font-family: "Cabin Condensed";
+}
+
+#text {
+  color: white;
+  position: relative;
+  outline: none;
+  z-index: 2;
+  font-family: "Advent Pro", serif;
+  font-size: 88px;
+  text-shadow: 8px 8px 8px #060c21;
+}
+#textp {
+  color: white;
+  position: relative;
+  outline: none;
+  z-index: 2;
+  font-family: "Satisfy", serif;
+  font-size: 88px;
+  text-shadow: 8px 8px 8px #060c21;
+}
+.aboutbtn {
+  position: absolute;
+  top: -25px;
+  width: 150px;
+  height: 120px;
+  background: url(./images/prof.jpg) no-repeat center;
+  background-size: contain;
+  border: 3px solid #75ad35;
+  outline: none;
+  border-radius: 50%;
+}
+.content h1{
+  font-family: "Advent Pro", serif;
+  text-transform: uppercase;
+  font-size: 40px;
+
+}
+.content p{
+  font-family: "Satisfy", serif;
+  font-size: 25px;
+ 
+}
+#headbtn {
+  position: relative;
+  z-index: 2;
+  background: #060c21;
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 40px auto;
+}
+#headbtn a {
+  font-family: "Advent Pro", serif;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.box-blur {
+  position: relative;
+  width: calc(100% - 90px);
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 0px 5px 15px rgba (0, 0, 0, 0.9);
+  overflow: hidden;
+  color: #000;
+  border-radius: 10px;
+}
+.box-blur:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  left: -20px;
+  bottom: -20px;
+  background: url(./images/headimage.jpg) no-repeat center;
+  background-attachment: fixed;
+  filter: blur(4px);
+}
+
+.mainbox {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  height: 500px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainbox1 {
+  width: calc(100% - 30px);
+  margin: 0px 50px;
+  height: 300px;
+  display: block;
+  height: 500px;
+  position: relative;
+  
+  
+}
+.box {
+  
+  position: relative;
+  display: flex;
+  width: calc(100% - 30px);
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+}
+.box1 {
+  margin: 0 auto;
+  padding: 50px;
+  position: relative;
+  display: block;
+  width: calc(100% - 30px);
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+}
+
+.skillset{
+  font-family: "Advent Pro", serif;
+  display: relative;
+  height: 100px;
+  background-color: #060c21;
+  
+
+  
+}
+.skillset h3{
+  position: relative;
+  text-align: center;
+}
+.skillset ul{
+  list-style-type: none;
+  display: flex;
+}
+.skillset ul li{
+padding: 5px;
+}
+.skillset .aboutskill{
+  width: 90px;
+  height: 30px;
+  margin: 10px auto;
+  border: none;
+  outline: none;
+  background-color: #75ad35;
+  color: #060c21;
+  border: 2px solid white;
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: white;
+  z-index: -1;
+}
+
+.box:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -2;
+  filter: blur(1.5rem);
+}
+.box::after,
+.box::before {
+  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
+.box1:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: white;
+  z-index: -1;
+}
+
+.box1:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -2;
+  filter: blur(1.5rem);
+}
+.box1::after,
+.box1::before {
+  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+}
+.content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projectsec{
+  width: 300px;
+  height: 200px;
+  position: absolute;
+
+}
+.prodes{
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  width: 200px;
+  height: 110px;
+  background-color: #00bcd4;
+}
+@media all and (max-width: 500px) {
+  #imenu {
+    display: flex;
+    cursor: pointer;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .box1 {
+    height: 800px;
+  }
+  .skillset{
+    border: none;
+  }
+  .skillset ul{
+    
+    flex-direction: column;
+  }
+  .header {
+    width: 100%;
+    height: 700px;
+    background: url(./images/headimage.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-size: 20px;
+    font-family: "Cabin Condensed";
+  }
+
+  #text {
+    font-size: 50px;
+  }
+  #textp {
+    font-size: 50px;
+  }
+  
+  #headbtn {
+    width: 150px;
+    height: 50px;
+  }
+  #headbtn a {
+    font-size: 20px;
+  }
+  .aboutbtn {
+    width: 100px;
+    height: 90px;
+    
+  }
+  
+  .content{
+  
+    padding: 10px;
+  }
+  .content h1{
+    font-family: "Advent Pro", serif;
+    text-transform: uppercase;
+    font-size: 30px;
+  
+  }
+  .content p{
+    font-family: "Satisfy", serif;
+    font-size: 15px;
+   
+  }
+
+}
