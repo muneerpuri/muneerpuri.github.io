@@ -45,22 +45,24 @@ body {
   display: none;
 }
 
-.headabout{
-  flex-direction: column;
-  content: '';
-  position: relative;
-  z-index: -10;
-  display: flex;
-  width: 100%;
-  height: 1000px;
+.headabout {
+  width: calc(100% - 50px);
+  height: 400px;
   background: url(./images/headabout.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
-  justify-content: center;
+  margin: 0px auto;
+  display: flex;
   align-items: center;
- 
+  justify-content: center;
+  font-family: "Advent Pro", serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: white;
+  text-shadow: 8px 8px 8px #060c21;
 }
+
 .header {
   display: flex;
   width: 100%;
@@ -106,16 +108,10 @@ body {
   outline: none;
   border-radius: 50%;
 }
-.content h1{
-  font-family: "Advent Pro", serif;
-  text-transform: uppercase;
-  font-size: 40px;
 
-}
-.content p{
+.content p {
   font-family: "Satisfy", serif;
   font-size: 25px;
- 
 }
 #headbtn {
   position: relative;
@@ -157,79 +153,80 @@ body {
   filter: blur(4px);
 }
 
-.mainbox {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  height: 500px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-
-.mainbox1 {
-  width: calc(100% - 30px);
-  margin: 0px 50px;
-  height: 300px;
-  display: block;
-  height: 500px;
-  position: relative;
-  
-  
-}
 .box {
-  
   position: relative;
   display: flex;
-  width: calc(100% - 30px);
+  width: calc(100% - 80px);
+  margin: 40px auto;
   height: 400px;
   justify-content: center;
   align-items: center;
   background: #060c21;
 }
-.box1 {
-  margin: 0 auto;
-  padding: 50px;
-  position: relative;
-  display: block;
-  width: calc(100% - 30px);
-  height: 200px;
-  justify-content: center;
-  align-items: center;
-  background: #060c21;
-}
 
-.skillset{
+.skillabt {
+  margin: 0px auto;
   font-family: "Advent Pro", serif;
-  display: relative;
-  height: 100px;
-  background-color: #060c21;
-  
-
-  
-}
-.skillset h3{
   position: relative;
+  width: calc(100% - 50px);
+  height: 250px;
+  background-color: #060c21;
   text-align: center;
+  color: white;
+  
 }
-.skillset ul{
-  list-style-type: none;
-  display: flex;
+.skillb{
+  position: absolute;
+  text-align: center;
+  width: calc(100% - 30px);
+  margin: 0px auto;
+  margin: 40px 20px;
+
 }
-.skillset ul li{
-padding: 5px;
-}
-.skillset .aboutskill{
-  width: 90px;
-  height: 30px;
-  margin: 10px auto;
+.colorskill{
   border: none;
   outline: none;
-  background-color: #75ad35;
-  color: #060c21;
-  border: 2px solid white;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  margin: 10px;
 }
 
+
+#clang{
+  background: url(./images/clogo.png) no-repeat center;
+  background-size: cover;
+}
+#php{
+  background: url(./images/php.png) no-repeat center;
+  background-size: cover;
+}
+#clang{
+  background: url(./images/clogo.png) no-repeat center;
+  background-size: cover;
+}
+#js{
+  background: url(./images/js.png) no-repeat center;
+  background-size: cover;
+}#mongo{
+  background: url(./images/mongo.png) no-repeat center;
+  background-size: cover;
+}
+#java{
+  background: url(./images/java.png) no-repeat center;
+  background-size: cover;
+}#html{
+  background: url(./images/html.png) no-repeat center;
+  background-size: cover;
+}
+#mysql{
+  background: url(./images/mysql.png) no-repeat center;
+  background-size: cover;
+}
+#css{
+  background: url(./images/css.png) no-repeat center;
+  background-size: cover;
+}
 .box:before {
   content: "";
   position: absolute;
@@ -256,32 +253,6 @@ padding: 5px;
 .box::before {
   background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
 }
-.box1:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: white;
-  z-index: -1;
-}
-
-.box1:after {
-  content: "";
-  background: #fff;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  z-index: -2;
-  filter: blur(1.5rem);
-}
-.box1::after,
-.box1::before {
-  background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
-}
 .content {
   color: white;
   display: flex;
@@ -297,13 +268,12 @@ padding: 5px;
   justify-content: center;
   align-items: center;
 }
-.projectsec{
+.projectsec {
   width: 300px;
   height: 200px;
   position: absolute;
-
 }
-.prodes{
+.prodes {
   color: white;
   border-radius: 10px;
   padding: 10px;
@@ -313,6 +283,7 @@ padding: 5px;
   height: 110px;
   background-color: #00bcd4;
 }
+
 @media all and (max-width: 500px) {
   #imenu {
     display: flex;
@@ -341,12 +312,8 @@ padding: 5px;
   .box1 {
     height: 800px;
   }
-  .skillset{
-    border: none;
-  }
-  .skillset ul{
-    
-    flex-direction: column;
+  .headabout{
+    font-size: 20px;
   }
   .header {
     width: 100%;
@@ -364,7 +331,7 @@ padding: 5px;
   #textp {
     font-size: 50px;
   }
-  
+
   #headbtn {
     width: 150px;
     height: 50px;
@@ -375,23 +342,18 @@ padding: 5px;
   .aboutbtn {
     width: 100px;
     height: 90px;
-    
   }
-  
-  .content{
-  
+
+  .content {
     padding: 10px;
   }
-  .content h1{
+  .content h1 {
     font-family: "Advent Pro", serif;
     text-transform: uppercase;
     font-size: 30px;
-  
   }
-  .content p{
+  .content p {
     font-family: "Satisfy", serif;
     font-size: 15px;
-   
   }
-
 }
