@@ -283,8 +283,7 @@ body {
   height: 110px;
   background-color: #00bcd4;
 }
-.footer{
-  left: 0px;
+footer{
   bottom: 0px;
   height: 40px;
   width: 100%;
@@ -365,5 +364,12 @@ padding: 10px;
   .content p {
     font-family: "Satisfy", serif;
     font-size: 15px;
+  }
+  .skillabt{
+height: 400px;
+
+  }
+  footer{
+    margin-bottom: -200px;
   }
 }
