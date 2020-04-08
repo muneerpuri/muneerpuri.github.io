@@ -284,6 +284,7 @@ body {
   background-color: #00bcd4;
 }
 footer{
+  left: 0px;
   bottom: 0px;
   height: 40px;
   width: 100%;
@@ -369,7 +370,5 @@ padding: 10px;
 height: 400px;
 
   }
-  footer{
-    margin-bottom: -200px;
-  }
+  
 }
