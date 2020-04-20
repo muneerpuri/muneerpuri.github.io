@@ -1,0 +1,140 @@
+.footer{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    
+  color: white;
+  background-color: #051240;
+}
+
+.projectabout {
+    width: calc(100% - 50px);
+    height: 400px;
+    background: url(./images/projectimage.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Advent Pro", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: white;
+    text-shadow: 8px 8px 8px #060c21;
+  }
+.project-section {
+
+    width: calc(100% - 30px);
+    margin: 90px auto;
+    height: 350px;
+    color: white;
+    text-align: center;
+  }
+  .project-section h4 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: "Fjalla One", serif;
+    font-size: 30px;
+    text-transform: uppercase;
+
+  }
+  .project-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  .project-section table,
+  th,
+  td {
+    border-bottom : 1px solid white;
+  }
+  .project-section th {
+    height: 70px;
+    padding: 10px;
+    
+    font-size: 25px;
+    font-family: "Roboto Condensed", serif;
+  }
+  .project-section td {
+    height: 40px;
+    padding: 10px;
+    font-family: "Comic Neue", serif;
+  }
+  .project-section tr:nth-child(odd) {
+    background-color: #0e4d92;
+  }
+  .project-section tr:nth-child(even) {
+    background-color: #111e63;
+  }
+  .project-section th {
+    background-color: #000080;
+    text-transform: uppercase;
+  }
+  .project-section tr:hover {
+    background-color: #7285a5;
+  }
+  .project-table {
+    overflow-x: auto;
+  }
+  .project-btn{
+      width: 100px;
+      height: 30px;
+      margin: 10px 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border-radius: 3px;
+
+  }
+  .project-btn:hover{
+      background-color: #000080;
+      color: white;
+  }
+  .projectabout h1{
+
+    font-family: "Comic Neue", serif;
+    text-transform: uppercase;
+    font-size: 60px;
+  }
+@media all and (max-width:500px){
+    
+.projectabout {
+    width: calc(100% - 50px);
+    height: 400px;
+    background: url(./images/projectimage.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 8px 8px 8px #060c21;
+  }
+  .projectabout h1{
+
+    font-family: "Comic Neue", serif;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+    
+      .project-section th {
+        font-size: 15px;
+    }
+    .project-section td {
+        font-size: 13px;
+    }
+    .project-btn{
+        width: 70px;
+        height: 30px;
+        font-size: 13px;
+  
+    }
+  
+}

@@ -62,56 +62,6 @@ body {
   color: white;
   text-shadow: 8px 8px 8px #060c21;
 }
-.project-section {
-  width: calc(100% - 30px);
-  margin: 0px auto;
-  height: 400px;
-  color: white;
-  text-align: center;
-}
-.project-section h4 {
-  margin-top: 40px;
-  margin-bottom: 30px;
-  font-family: "Fjalla One", serif;
-  font-size: 30px;
-}
-.project-section table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-.project-section table,
-th,
-td {
-  border-bottom : 1px solid white;
-}
-.project-section th {
-  height: 50px;
-  padding: 10px;
-  font-family: "Roboto Condensed", serif;
-}
-.project-section td {
-  height: 40px;
-  padding: 10px;
-
-  font-family: "Comic Neue", serif;
-}
-.project-section tr:nth-child(odd) {
-  background-color: #0e4d92;
-}
-.project-section tr:nth-child(even) {
-  background-color: #111e63;
-}
-.project-section th {
-  background-color: #0f52ba;
-}
-.project-section tr:hover {
-  background-color: #7285a5;
-}
-.project-table {
-  overflow-x: auto;
-}
-
 .header {
   display: flex;
   width: 100%;
