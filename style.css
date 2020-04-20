@@ -62,6 +62,55 @@ body {
   color: white;
   text-shadow: 8px 8px 8px #060c21;
 }
+.project-section {
+  width: calc(100% - 30px);
+  margin: 0px auto;
+  height: 400px;
+  color: white;
+  text-align: center;
+}
+.project-section h4 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-family: "Fjalla One", serif;
+  font-size: 30px;
+}
+.project-section table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.project-section table,
+th,
+td {
+  border-bottom : 1px solid white;
+}
+.project-section th {
+  height: 50px;
+  padding: 10px;
+  font-family: "Roboto Condensed", serif;
+}
+.project-section td {
+  height: 40px;
+  padding: 10px;
+
+  font-family: "Comic Neue", serif;
+}
+.project-section tr:nth-child(odd) {
+  background-color: #0e4d92;
+}
+.project-section tr:nth-child(even) {
+  background-color: #111e63;
+}
+.project-section th {
+  background-color: #0f52ba;
+}
+.project-section tr:hover {
+  background-color: #7285a5;
+}
+.project-table {
+  overflow-x: auto;
+}
 
 .header {
   display: flex;
@@ -173,17 +222,15 @@ body {
   background-color: #060c21;
   text-align: center;
   color: white;
-  
 }
-.skillb{
+.skillb {
   position: absolute;
   text-align: center;
   width: calc(100% - 30px);
   margin: 0px auto;
   margin: 40px 20px;
-
 }
-.colorskill{
+.colorskill {
   border: none;
   outline: none;
   width: 70px;
@@ -192,38 +239,48 @@ body {
   margin: 10px;
 }
 
-
-#clang{
+#clang {
   background: url(./images/clogo.png) no-repeat center;
   background-size: cover;
 }
-#php{
+#php {
   background: url(./images/php.png) no-repeat center;
   background-size: cover;
 }
-#clang{
+#clang {
   background: url(./images/clogo.png) no-repeat center;
   background-size: cover;
 }
-#js{
+#go {
+  background: url(./images/go.png) no-repeat center;
+  background-size: cover;
+}
+#git {
+  background: url(./images/git.png) no-repeat center;
+  background-size: cover;
+}
+
+#js {
   background: url(./images/js.png) no-repeat center;
   background-size: cover;
-}#mongo{
+}
+#mongo {
   background: url(./images/mongo.png) no-repeat center;
   background-size: cover;
 }
-#java{
+#java {
   background: url(./images/java.png) no-repeat center;
   background-size: cover;
-}#html{
+}
+#html {
   background: url(./images/html.png) no-repeat center;
   background-size: cover;
 }
-#mysql{
+#mysql {
   background: url(./images/mysql.png) no-repeat center;
   background-size: cover;
 }
-#css{
+#css {
   background: url(./images/css.png) no-repeat center;
   background-size: cover;
 }
@@ -283,15 +340,15 @@ body {
   height: 110px;
   background-color: #00bcd4;
 }
-footer{
+footer {
   left: 0px;
   bottom: 0px;
   height: 40px;
   width: 100%;
   text-align: center;
-color: white;
-background-color: #051240;
-padding: 10px;
+  color: white;
+  background-color: #051240;
+  padding: 10px;
 }
 @media all and (max-width: 500px) {
   #imenu {
@@ -317,17 +374,46 @@ padding: 10px;
   }
 }
 
-
 @media all and (max-width: 500px) {
+  .header #headbtn {
+    position: relative;
+    z-index: 2;
+    background: #060c21;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 40px auto;
+  }
+  .header #headbtn a {
+    font-family: "Advent Pro", serif;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+  }
+
+  .header #text {
+    font-size: 30px;
+  }
+  .header #textp {
+    font-size: 20px;
+  }
   .box1 {
     height: 800px;
   }
-  .headabout{
+  .headabout {
     font-size: 20px;
+  }
+  .box-blur {
+    height: 250px;
+  }
+  .box-blur:before {
+    height: 250px;
   }
   .header {
     width: 100%;
-    height: 700px;
+    height: 400px;
     background: url(./images/headimage.jpg) no-repeat center;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -366,9 +452,15 @@ padding: 10px;
     font-family: "Satisfy", serif;
     font-size: 15px;
   }
-  .skillabt{
-height: 400px;
-
+  .skillabt {
+    height: 500px;
   }
-  
+}
+
+#headbtn:hover {
+  background-color: white;
+  color: black;
+}
+#headbtn a:hover {
+  color: black;
 }
