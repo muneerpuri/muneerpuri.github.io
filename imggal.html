@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>image gallery</title>
+        <style>
+
+            nav ul li a:hover{
+                background-color: #E22F37;
+                color: black;
+            }
+            
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            
+            nav{
+                float :right;
+                position: fixed;
+                background-color: #FFFB46;
+                overflow: hidden;
+                border-radius: 30px;
+                margin:0px 0px 0px 763px;
+                height:70px;
+                z-index:1;
+                
+            }
+            nav ul{
+                list-style-type:none;
+                line-height: 50px;
+               
+            }
+            nav ul li{
+                display:inline-block;
+                padding: 10px 10px;
+                
+
+            }
+            nav ul li a{
+               
+                text-decoration: none;
+                padding: 18px 25px;
+                border-radius: 30px;
+            }
+
+
+            h1{
+                font-family: cursive; text-align:center; color:#E22F37;font-size:70px;
+
+            }
+            
+            h1:hover{
+                color: #FCAB10;
+                cursor: pointer;
+            }
+
+            
+            body{
+                background-image: url("bckwl.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+
+            }
+            .imagegroup{
+                border-radius: 20px;
+                border:5px dotted #F8333C;
+                width:300px;
+                height:400px;
+                padding: 10px 10px;
+                margin:20px 50px 20px 50px;
+                float:left;
+                overflow: hidden;
+                
+                
+            }
+            .imagegroup img{
+                
+                width:300px;
+                height:400px;
+                transition: all 1s;
+            }
+            .plus{
+                overflow: hidden;
+                border-radius: 30px;
+                
+            }
+            .plus:hover img{
+
+                transform: scale(1.2,1.2);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="top">
+        <nav>
+        <ul>
+            <span>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">GALLERY</a></li><li>
+        <a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT US</a></li>        
+    </ul>
+        </nav></div>
+        
+        <br><br><br><br><br>
+        <H1>SHINCHAN IMAGE GALLERY</H1>
+        <div class="imagegroup">
+        <div class="plus">
+        <img src="./images/shin1.jpg">
+        </div></div>
+        <div class="imagegroup">
+        <div class="plus">
+        <img src="./images/shin2.jpg">
+        </div></div>
+        <div class="imagegroup">
+        <div class="plus">
+        <img src="./images/shin3.jpg">
+        </div></div>
+        <div class="imagegroup">
+        <div class="plus">
+        <img src="./images/shin4.jpg">
+        </div></div>
+        <div class="imagegroup">
+        <div class="plus">
+        <img src="./images/shin5.jpg">
+        </div></div>
+        <div class="imagegroup">
+        <div class="plus">
+        <img src="./images/shin6.jpg">
+        </div></div>
+
+    </body>
+    </html>
