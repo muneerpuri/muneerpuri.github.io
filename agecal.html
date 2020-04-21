@@ -1,137 +1,131 @@
 <html>
-<head>
-<script type="text/javascript">
-function calc()
-    {
+  <head>
+    <script type="text/javascript">
+      function calc() {
+        var calyear;
+        var calmonth;
+        var caldate;
+        var curdate = new Date().getDay();
+        var curmonth = new Date().getMonth();
+        var curyear = new Date().getFullYear();
+        var bdate = document.getElementById("date").value;
+        var bmonth = document.getElementById("month").value;
+        var byear = document.getElementById("year").value;
 
+        if (bdate.trim() != "" && bmonth.trim() != "" && byear.trim() != "") {
+          if (bdate > curdate) {
+            curmonth -= 1;
+            curdate += 30;
+          }
+          if (bmonth > curmonth) {
+            curyear -= 1;
+            curmonth += 12;
+          }
+          if (byear > curyear) {
+            alert("ERROR201:INVALID BIRTH YEAR");
+          }
+          caldate = curdate - bdate;
+          calmonth = curmonth - bmonth;
+          calyear = curyear - byear;
 
-    var calyear;
-    var calmonth;
-    var caldate;
-    var curdate=new Date().getDay();
-    var curmonth=new Date().getMonth();
-    var curyear=new Date().getFullYear();
-    var bdate=document.getElementById("date").value;
-    var bmonth=document.getElementById("month").value;
-    var byear=document.getElementById("year").value;
-    
-    if(bdate.trim()!=""&& bmonth.trim()!="" && byear.trim()!="")
-    {
-        if(bdate>curdate)
-        {
-            curmonth-=1;
-            curdate+=30;
+          alert(
+            "\t\tYOUR AGE IS\n\n\n" +
+              "YEARS\t\t\t" +
+              calyear +
+              "\nMONTHS\t\t\t" +
+              calmonth +
+              "\nDAYS\t\t\t" +
+              caldate
+          );
+        } else {
+          alert("ERROR270:PLEASE FILL ALL REQUIRED FIELDS");
         }
-        if(bmonth>curmonth)
-        {
-            curyear-=1;
-            curmonth+=12;
-        }
-        if(byear>curyear)
-        {
-            alert("ERROR201:INVALID BIRTH YEAR")
-        }
-        caldate=curdate-bdate;
-        calmonth=curmonth-bmonth;
-        calyear=curyear-byear;
-
-        alert("\t\tYOUR AGE IS\n\n\n"+"YEARS\t\t\t"+calyear+"\nMONTHS\t\t\t"+calmonth+"\nDAYS\t\t\t"+caldate);
-
+      }
+    </script>
+    <title>AGE CALCULATOR</title>
+  </head>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
     }
-    else
-    {
-        alert("ERROR270:PLEASE FILL ALL REQUIRED FIELDS");
+    body {
+      background-image: url("./images/ppic.jpg");
+      height: 200px !important;
     }
-
-            
-            
+    .main {
+      width: 300px;
+      height: 150px;
+      background-color: rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 50px 10px;
+      margin: auto;
+      margin-top: 150px;
+      border-radius: 70px;
     }
-</script>
-<title>AGE CALCULATOR</title></head>
-<style>
-*{
-    padding:0px;
-    margin:0px;
-}
-body{
-        background-image: url("./images/ppic.jpg");
+    .main label {
+      padding: 10px 10px;
+      font-family: cursive;
     }
-.main{
-    width:300px;
-    height:150px;
-    background-color: rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 50px 10px;
-    margin:auto;
-    margin-top:150px;
-    border-radius: 70px;
+    .main input[type="text"] {
+      margin: 10px 10px 10px 0px;
+      font-family: cursive;
+      width: 45px;
     }
-.main label{
-    padding:10px 10px;
-    font-family: cursive;
-    
+    .main input[type="button"] {
+      margin: 30px 10px 10px 10px;
+      font-family: cursive;
+      padding: 10px 10px;
+      border-radius: 10px;
+    }
+    .navbar {
+      background-color: black;
+      color: white;
+      height: 44px;
+      font-family: cursive;
+      font-size: 20px;
+      text-align: center;
+    }
+    .navbar ul {
+      list-style-type: none;
+    }
+    #year {
+      width: 50px;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      text-align: center;
+      background-color: red;
+      color: white;
+      width: 100%;
+    }
+  </style>
 
-}
-.main input[type="text"]{
-    margin:10px 10px 10px 0px;
-    font-family: cursive;
-    width:45px;
-}
-.main input[type="button"]{
-    margin:30px 10px 10px 10px;
-    font-family: cursive;
-    padding:10px 10px;
-    border-radius: 10px;
-    
-
-}
-.navbar{
-    background-color: black;
-    color:white;
-    height:44px;
-    font-family: cursive;
-    font-size: 20px;
-    text-align: center;    
-}
-.navbar ul {
-    list-style-type: none;
-}
-#year{
-width:50px;
-}
-.footer{
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  background-color: red;
-  color: white;
-  width: 100%;
-
-    
-}
-
-</style>
-
-<body>
-<div class="navbar">
-<nav>
-<ul>
-    <li>
-        CALCULATE YOUR AGE BELOW
-    </li>
-</ul>
-</nav>
-</div>
-<div class="main">
-    <form autocomplete="off">
-       <label>Enter DOB</label><input type="text"  required placeholder="Day" id="date"><input type="text" placeholder="Month" required id="month"><input type="text" placeholder="Year" required id="year">
-       <br><input type="button"  value="SUBMIT" onclick="calc()">
-
-</form>
-</div>
-<div class="footer">
-<p>Copyright © Muneer Puri</p>
-</div>
-</body>
+  <body>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li>
+            CALCULATE YOUR AGE BELOW
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main">
+      <form autocomplete="off">
+        <label>Enter DOB</label
+        ><input type="text" required placeholder="Day" id="date" /><input
+          type="text"
+          placeholder="Month"
+          required
+          id="month"
+        /><input type="text" placeholder="Year" required id="year" />
+        <br /><input type="button" value="SUBMIT" onclick="calc()" />
+      </form>
+    </div>
+    <div class="footer">
+      <p>Copyright © Muneer Puri</p>
+    </div>
+  </body>
 </html>
-
