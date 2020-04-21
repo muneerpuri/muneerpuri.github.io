@@ -325,6 +325,7 @@ footer {
 }
 
 @media all and (max-width: 500px) {
+  
   .header #headbtn {
     position: relative;
     z-index: 2;
