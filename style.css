@@ -6,7 +6,78 @@
 body {
   background: #060c21;
 }
+.my-info {
+  border: 3px solid rgba(168, 170, 243, 0.705);
+  width: calc(100% - 30px);
+  margin: 0px auto;
+  height: 500px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.my-info-inner {
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(360deg,#C7E9FB,#060c21 40% );
+  border-radius: 50px;
+  margin: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s all ease-in-out;
+}
+.my-info-innera {
+opacity: 1;
+transform: translateY(0px);
+}
+.my-info-inner:hover{
+  background: linear-gradient(360deg,#060c21 40%,#C7E9FB );
+  
+}
+.my-info-image img {
+  height: 140px;
+  width: 120px;
+}
+.info-caption button {
+  background-color: white;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20%;
+  border: 3px solid #060c21;
+  outline: none;
 
+}
+@media all and (max-width:500px){
+  .my-info{
+    flex-direction: column;
+    height: 1100px;
+  }
+  .my-info-inner{
+    width: 150px;
+  height: 180px;
+  border-radius: 30px;
+  }
+  .my-info-image img {
+    height: 110px;
+    width: 90px;
+  }
+  .info-caption button {
+    background-color: white;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20%;
+    border: 3px solid #060c21;
+    font-size: 18px;
+  font-family: "Cabin Condensed";
+  
+  }
+
+}
 .navbar {
   position: relative;
   width: 100%;
@@ -325,7 +396,6 @@ footer {
 }
 
 @media all and (max-width: 500px) {
-  
   .header #headbtn {
     position: relative;
     z-index: 2;
@@ -335,7 +405,7 @@ footer {
     width: 100px;
     height: 40px;
     border-radius: 10px;
-    margin: 40px auto;
+    margin: 1px auto;
   }
   .header #headbtn a {
     font-family: "Advent Pro", serif;
