@@ -6,46 +6,63 @@
   crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="./images/mainlogo.png" sizes="16x16">
     <script type="text/javascript">
+
       function calc() {
-        var calyear;
-        var calmonth;
-        var caldate;
-        var curdate = new Date().getDay();
-        var curmonth = new Date().getMonth();
-        var curyear = new Date().getFullYear();
-        var bdate = document.getElementById("date").value;
-        var bmonth = document.getElementById("month").value;
-        var byear = document.getElementById("year").value;
+        var calculated_year;
+        var calculated_month;
+        var calculated_date;
+        var current_date = new Date().getDay();
+        var current_month = new Date().getMonth();
+        var current_year = new Date().getFullYear();
+        var birth_date = document.getElementById("date").value;
+        var birth_month = document.getElementById("month").value;
+        var birth_year = document.getElementById("year").value;
 
-        if (bdate.trim() != "" && bmonth.trim() != "" && byear.trim() != "") {
-          if (bdate > curdate) {
-            curmonth -= 1;
-            curdate += 30;
-          }
-          if (bmonth > curmonth) {
-            curyear -= 1;
-            curmonth += 12;
-          }
-          if (byear > curyear) {
-            alert("ERROR201:INVALID BIRTH YEAR");
-          }
-          caldate = curdate - bdate;
-          calmonth = curmonth - bmonth;
-          calyear = curyear - byear;
 
-          alert(
+
+         // days of every month 
+    var month =  [31, 28, 31, 30, 31, 30, 31,  
+                          31, 30, 31, 30, 31 ]; 
+  
+    // if birth date is greater then current birth 
+    // month then do not count this month and add 30  
+    // to the date so as to subtract the date and 
+    // get the remaining days 
+    if (birth_date.trim() != "" && birth_month.trim() != "" && birth_year.trim() != "") {
+    if (birth_date > current_date) { 
+        current_date = current_date + month[birth_month - 1]; 
+        current_month = current_month - 1; 
+    } 
+  
+    // if birth month exceeds current month, then do 
+    // not count this year and add 12 to the month so 
+    // that we can subtract and find out the difference 
+    if (birth_month > current_month) { 
+        current_year = current_year - 1; 
+        current_month = current_month + 12; 
+    } 
+  
+    // calculate date, month, year 
+     calculated_date = current_date - birth_date; 
+     calculated_month = current_month - birth_month; 
+     calculated_year = current_year - birth_year;
+
+     alert(
             "\t\tYOUR AGE IS\n\n\n" +
               "YEARS\t\t\t" +
-              calyear +
+              calculated_year +
               "\nMONTHS\t\t\t" +
-              calmonth +
+              calculated_month +
               "\nDAYS\t\t\t" +
-              caldate
+              calculated_date
           );
         } else {
           alert("ERROR270:PLEASE FILL ALL REQUIRED FIELDS");
         }
       }
+
+
+
     </script>
     <title>AGE CALCULATOR</title>
   </head>
