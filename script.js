@@ -1,8 +1,22 @@
-const menu = document.querySelector(".menutoggle");
-const nl = document.querySelector(".navbar-links");
-menu.addEventListener("click", () => {
-  nl.classList.toggle("active");
+$(document).ready(function(){
+$(".menutoggle").click(function(){
+$(".navbar-links").slideToggle("fast");
 });
+
+});
+
+
+
+
+
+
+
+
+// const menu = document.querySelector("");
+// const nl = document.querySelector(".navbar-links");
+// menu.addEventListener("click", () => {
+//   nl.classList.toggle("active");
+// });
 
 function scrollAppear() {
   var infodiv = document.getElementsByClassName("my-info-inner")[0];
